@@ -39,17 +39,20 @@ module.exports =
       "es6": true,
       "mocha": true
   },
+  // "parser": "babel-eslint",
   // JavaScript 语言选项
   "parserOptions": {
       // ECMAScript 版本
-      "ecmaVersion": 6,
+      "ecmaVersion": 8,
       "sourceType": "module", //设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
       //想使用的额外的语言特性:
       "ecmaFeatures": {
           // 允许在全局作用域下使用 return 语句
           "globalReturn": true,
-          // impliedStric
+          // 严格模式
           "impliedStrict": true,
+          // 对象展开...
+          "experimentalObjectRestSpread": true,
           // 启用 JSX
           "jsx": true,
           "modules": true
@@ -533,7 +536,7 @@ module.exports =
       // 要求箭头函数体使用大括号
       "arrow-body-style": 2,
       // 要求箭头函数的参数使用圆括号
-      "arrow-parens": 2,
+      "arrow-parens": [2,"as-needed"],
       "arrow-spacing": [2, {
           "before": true,
           "after": true
@@ -588,7 +591,9 @@ module.exports =
       // 要求或禁止模板字符串中的嵌入表达式周围空格的使用
       "template-curly-spacing": 1,
       // 强制在 yield* 表达式中 * 周围使用空格
-      "yield-star-spacing": 2
+      "yield-star-spacing": 2,
+
+      "experimentalDecorators": 0
   }
 }
 
