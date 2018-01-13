@@ -2,22 +2,37 @@ import styled from 'styled-components/native'
 import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-const styledView = styled.View`
+const StyledView = styled.View`
   flex: 1;
-  height: 30px;
-  background-color: red;
+  height: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  background-color: #eee;
 `
 
-export default class header extends Component {
+const StyledText = styled.Text`
+  color: red;
+`
+
+const StyleIcon = styled.View`
+  flex: 1;
+  height: 20px;
+`
+
+export default class Header extends Component {
   render() {
     return (
-      <styledView>
-        <Icon name="menu" size={26} color="#300" />
-        {/* <Text>主页</Text> */}
-        <Icon name="notifications" size={26} color="#999" />
-      </styledView>
+      <StyledView>
+        <StyleIcon>
+          <Icon name="menu" size={30} color="#300" />
+        </StyleIcon>
+        <StyleIcon>
+          <StyledText>主页</StyledText>
+        </StyleIcon>
+        <StyleIcon>
+          <Icon name="notifications" size={30} color="#999" />
+        </StyleIcon>
+      </StyledView>
     )
   }
 }

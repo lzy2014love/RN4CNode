@@ -28,10 +28,6 @@ const drawerConfig = {
     style: {
       // 样式
       marginVertical: 0
-    },
-    onItemPress: route => {
-      console.log('-------->' + JSON.stringify(route))
-      Alert.alert('sss')
     }
   }
 }
