@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 import { Provider } from 'redux'
 import config from './config'
 import Navigator from './navigator'
-// import store from './store'
+import store from './store'
 
 export default class App extends Component {
 
